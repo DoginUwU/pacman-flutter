@@ -5,7 +5,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=2.17.6 <3.1.0"
 
 dependencies:
   flutter:
@@ -13,6 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   bonfire: ^2.7.4
+  flame_audio: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,12 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/audio/
     - assets/images/
     - assets/images/tiled/
     - assets/images/player/
+    - assets/images/enemy/
+  fonts:
+    - family: Minecraft
+      fonts:
+        - asset: assets/fonts/Minecraft.ttf

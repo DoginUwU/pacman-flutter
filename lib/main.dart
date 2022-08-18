@@ -1,7 +1,12 @@
 import 'package:escribo_game/game.dart';
+import 'package:escribo_game/utils/sounds.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Sounds.initialize();
+
   runApp(const MyApp());
 }
 

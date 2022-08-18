@@ -1,21 +1,23 @@
 import 'package:bonfire/bonfire.dart';
+import 'package:escribo_game/player/pacman.dart';
+import 'package:escribo_game/utils/globals.dart';
 
-class Coin extends GameDecoration with ObjectCollision {
-  Coin(Vector2 position, Vector2 size)
+class Coin extends GameDecoration with Sensor {
+  Coin(Vector2 position)
       : super.withSprite(
-          sprite: Sprite.load('player/pacman.png'),
+          sprite: Sprite.load('tiled/dot.png'),
           position: position,
-          size: size,
-        ) {
-    setupCollision(
-      CollisionConfig(
-        collisions: [
-          CollisionArea.rectangle(
-            size: Vector2(width, height / 4),
-            align: Vector2(0, height * 0.75),
-          ),
-        ],
-      ),
-    );
+          size: Vector2(24, 24),
+        );
+
+  @override
+  void onContact(GameComponent component) {
+    if (component is Pacman) {
+      coinsCollected.add(this);
+
+      score += 10;
+
+      removeFromParent();
+    }
   }
 }
