@@ -29,9 +29,11 @@ class _GameState extends State<Game>
 
   @override
   void initState() {
-    gameStarted = false;
     WidgetsBinding.instance.addObserver(this);
     gameController = GameController()..addListener(this);
+    gameStarted = false;
+    score = 0;
+    coinsCollected = [];
 
     Sounds.beginning();
     timer = async_dart.Timer(const Duration(seconds: 4), () {
