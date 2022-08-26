@@ -4,8 +4,6 @@
 <samp><h6 align="center">#flutter, #pacman, #desafio</h6></samp>
 <samp><h1 align="center">Pacman Desafio</h1></samp>
 
-<h6 align="center"><samp>Desafio para seleção de Desenvolvedor de Software da Escribo</samp></h6>
-
 ## Qual o objetivo
 O objetivo deste teste é implementar um jogo de labirinto no flutter.
 
